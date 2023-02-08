@@ -1,6 +1,6 @@
-NAME	= Sed
+NAME	= Zombie
 
-SOURCE	= ./src/main.cpp
+SOURCE	= ./src/main.cpp ./src/newZombie.cpp ./src/randomChump.cpp ./src/Zombie.cpp
 
 GCC		= c++
 
@@ -20,11 +20,10 @@ $(NAME)	: $(OBJS)
 		@echo "$(COLOUR_GREEN) SUCCESFUL $(COLOUR_END)"
 
 clean	:
-		@echo rm -rf $(NAME)
 		@echo "$(COLOUR_RED) CLEAN $(COLOUR_END)"
 
 fclean	: clean
-		@rm -rf $(NAME) $(OBJS)
+		@rm -f $(NAME) ./src/*.o
 		@echo "$(COLOUR_BLUE) FCLEAN $(COLOUR_END)"
 
 re		: fclean all

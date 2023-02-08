@@ -1,6 +1,6 @@
-NAME	= Sed
+NAME	= megaphone
 
-SOURCE	= ./src/main.cpp
+SOURCE	= Megaphone.cpp
 
 GCC		= c++
 
@@ -17,14 +17,16 @@ all		: $(NAME)
 
 $(NAME)	: $(OBJS) 
 		@$(GCC) $(FLAG) -o $(NAME) $(OBJS)
+		@mkdir obj
+		@mv $(OBJS) ./obj
 		@echo "$(COLOUR_GREEN) SUCCESFUL $(COLOUR_END)"
 
 clean	:
-		@echo rm -rf $(NAME)
+		@rm -rf obj
 		@echo "$(COLOUR_RED) CLEAN $(COLOUR_END)"
 
 fclean	: clean
-		@rm -rf $(NAME) $(OBJS)
+		@rm -f $(NAME) *.o
 		@echo "$(COLOUR_BLUE) FCLEAN $(COLOUR_END)"
 
 re		: fclean all

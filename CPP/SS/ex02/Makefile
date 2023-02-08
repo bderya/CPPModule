@@ -1,6 +1,6 @@
-NAME	= Sed
+NAME	= Address
 
-SOURCE	= ./src/main.cpp
+SOURCE	= main.cpp
 
 GCC		= c++
 

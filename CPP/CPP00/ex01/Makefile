@@ -1,10 +1,8 @@
-NAME	= Sed
+NAME	= PhoneBook
 
-SOURCE	= ./src/main.cpp
+GCC		= c++ -Wall -Wextra -Werror -std=c++98
 
-GCC		= c++
-
-FLAG	= -Wall -Wextra -Werror -std=c++98
+SOURCE	= ./source/Contact.cpp ./source/PhoneBook.cpp
 
 OBJS	= $(SOURCE:.cpp=.o)
 
@@ -20,11 +18,10 @@ $(NAME)	: $(OBJS)
 		@echo "$(COLOUR_GREEN) SUCCESFUL $(COLOUR_END)"
 
 clean	:
-		@echo rm -rf $(NAME)
 		@echo "$(COLOUR_RED) CLEAN $(COLOUR_END)"
 
 fclean	: clean
-		@rm -rf $(NAME) $(OBJS)
+		@rm -f $(NAME) *.o
 		@echo "$(COLOUR_BLUE) FCLEAN $(COLOUR_END)"
 
 re		: fclean all

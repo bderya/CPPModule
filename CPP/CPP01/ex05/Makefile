@@ -1,6 +1,6 @@
-NAME	= Sed
+NAME	= Harl
 
-SOURCE	= ./src/main.cpp
+SOURCE	= ./src/main.cpp ./src/Harl.cpp
 
 GCC		= c++
 

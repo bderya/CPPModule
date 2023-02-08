@@ -1,6 +1,6 @@
-NAME	= Sed
+NAME	= Violence
 
-SOURCE	= ./src/main.cpp
+SOURCE	= ./src/HumanA.cpp ./src/HumanB.cpp ./src/main.cpp ./src/Weapon.cpp
 
 GCC		= c++
 
